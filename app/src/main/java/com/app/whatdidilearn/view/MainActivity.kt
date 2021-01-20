@@ -1,7 +1,8 @@
-package com.app.whatdidilearn
+package com.app.whatdidilearn.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.app.whatdidilearn.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
