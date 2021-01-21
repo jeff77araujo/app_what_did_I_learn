@@ -11,6 +11,11 @@ import com.app.whatdidilearn.entities.ItemLearned
 
 class LearnedItemsAdapter: RecyclerView.Adapter<LearnedItemsAdapter.LearnedItemViewHolder>() {
     var data = listOf<ItemLearned>()
+        set(value) {
+            field = value
+            notifyDataSetChanged() // método que indica para o RecycleView que os dados mudaram
+        }
+
     inner class LearnedItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val titleItem: TextView = itemView.findViewById(R.id.itemTitle)
         val descriptionItem: TextView = itemView.findViewById(R.id.itemDescription)
@@ -22,7 +27,6 @@ class LearnedItemsAdapter: RecyclerView.Adapter<LearnedItemsAdapter.LearnedItemV
             levelItem.setBackgroundResource(color)
         }
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LearnedItemViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
