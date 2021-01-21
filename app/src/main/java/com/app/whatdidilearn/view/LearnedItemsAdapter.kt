@@ -1,5 +1,6 @@
 package com.app.whatdidilearn.view
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -24,7 +25,9 @@ class LearnedItemsAdapter: RecyclerView.Adapter<LearnedItemsAdapter.LearnedItemV
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LearnedItemViewHolder {
-        TODO("Not yet implemented")
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val itemView = layoutInflater.inflate(R.layout.item_learned, parent, false)
+        return LearnedItemViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {
@@ -32,7 +35,7 @@ class LearnedItemsAdapter: RecyclerView.Adapter<LearnedItemsAdapter.LearnedItemV
     }
 
     override fun onBindViewHolder(holder: LearnedItemViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val itemLearnedToShow: ItemLearned = data.get(position)
+        holder.bind(itemLearnedToShow.title, itemLearnedToShow.description, itemLearnedToShow.understandingLevel.color)
     }
-
 }
