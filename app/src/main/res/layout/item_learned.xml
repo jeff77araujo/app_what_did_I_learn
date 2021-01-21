@@ -19,7 +19,7 @@
 
     <TextView
         android:padding="@dimen/padding"
-        tools:text="O sistema de tipos de Kotlin visa eliminar o perigo de referências nulas do código - O sistema de tipos de Kotlin visa eliminar o perigo de referências nulas do código"
+        tools:text="O sistema de tipos de Kotlin visa eliminar o perigo de referências nulas do código"
         android:id="@+id/itemDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
