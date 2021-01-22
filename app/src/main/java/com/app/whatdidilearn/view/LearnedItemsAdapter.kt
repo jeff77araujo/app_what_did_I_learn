@@ -4,13 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.app.whatdidilearn.R
-import com.app.whatdidilearn.entities.ItemLearned
+import com.app.whatdidilearn.entities.LearnedItem
 
 class LearnedItemsAdapter: RecyclerView.Adapter<LearnedItemsAdapter.LearnedItemViewHolder>() {
-    var data = listOf<ItemLearned>()
+    var data = listOf<LearnedItem>()
         set(value) {
             field = value
             notifyDataSetChanged() // método que indica para o RecycleView que os dados mudaram
@@ -39,7 +38,7 @@ class LearnedItemsAdapter: RecyclerView.Adapter<LearnedItemsAdapter.LearnedItemV
     }
 
     override fun onBindViewHolder(holder: LearnedItemViewHolder, position: Int) {
-        val itemLearnedToShow: ItemLearned = data.get(position)
+        val itemLearnedToShow: LearnedItem = data.get(position)
         holder.bind(itemLearnedToShow.title, itemLearnedToShow.description, itemLearnedToShow.understandingLevel.color)
     }
 }
