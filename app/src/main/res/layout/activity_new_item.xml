@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.NewItemActivity"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+
+    <TextView
+        android:id="@+id/titleName"
+        android:text="Título"
+        style="@style/nameStyle"/>
+
+    <EditText
+        android:id="@+id/editorName"
+        style="@style/EditTextStyle"
+        android:inputType="textPersonName"/>
+
+    <TextView
+        android:id="@+id/titleDescription"
+        style="@style/nameStyle"
+        android:text="Descrição"/>
+
+    <EditText
+        android:id="@+id/editorDescription"
+        style="@style/EditTextStyle"
+        android:layout_height="143dp"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/saveBotton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:backgroundTint="#2D55BC"
+        android:text="Salvar" />
+
+
+
+
+</LinearLayout>
