@@ -11,6 +11,13 @@ class NewItemActivity : AppCompatActivity() {
         val binding = ActivityNewItemBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+
+        binding.saveButton.setOnClickListener {
+            val title = binding.editorName.text.toString()
+            val description = binding.editorDescription.text.toString()
+
+            navigateToMainActivity()
+        }
     }
 
     private fun navigateToMainActivity() {

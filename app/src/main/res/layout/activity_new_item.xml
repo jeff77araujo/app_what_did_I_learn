@@ -16,22 +16,22 @@
 
     <EditText
         android:id="@+id/editorName"
-        style="@style/EditTextStyle"
-        android:inputType="textPersonName"/>
+        android:inputType="textPersonName"
+        style="@style/EditTextStyle"/>
 
     <TextView
         android:id="@+id/titleDescription"
-        style="@style/nameStyle"
-        android:text="Descrição"/>
+        android:text="Descrição"
+        style="@style/nameStyle"/>
 
     <EditText
         android:id="@+id/editorDescription"
-        style="@style/EditTextStyle"
-        android:layout_height="143dp"
-        android:inputType="textPersonName" />
+        android:layout_height="192dp"
+        android:inputType="textPersonName"
+        style="@style/EditTextStyle"/>
 
     <Button
-        android:id="@+id/saveBotton"
+        android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"

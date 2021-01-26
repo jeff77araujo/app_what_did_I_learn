@@ -27,9 +27,8 @@ abstract class DatabaseItems: RoomDatabase() {
                     context.applicationContext,
                     DatabaseItems::class.java,
                     "learned_item_database"
-                )
-//                    .addCallback(DatabaseItemsCallback(scope))
-                    .build()
+                ).addCallback(DatabaseCallback(scope)).build()
+
                 INSTANCE = instance
                 instance
             }
